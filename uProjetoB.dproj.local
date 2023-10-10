@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/10/02 09:26:16.000.507,=C:\Users\Usuário\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/10/02 09:27:18.000.119,C:\Users\Usuário\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\uProjeto.pas</Transaction>
+    <Transaction>2023/10/02 09:27:18.000.119,C:\Users\Usuário\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\uProjeto.dfm</Transaction>
+    <Transaction>2023/10/02 11:56:05.000.228,C:\Users\Usuário\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\uProjetoB.dproj</Transaction>
+    <Transaction>2023/10/03 10:34:45.000.880,=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\Unit2.pas</Transaction>
+    <Transaction>2023/10/03 10:40:00.000.608,C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\uAdmin.pas=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\Unit2.pas</Transaction>
+    <Transaction>2023/10/03 10:40:00.000.608,C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\uAdmin.dfm=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\Unit2.dfm</Transaction>
+    <Transaction>2023/10/04 11:07:15.000.732,C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\uCadastro.dfm=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\uAdmin.dfm</Transaction>
+    <Transaction>2023/10/04 11:07:15.000.732,C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\uCadastro.pas=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\uAdmin.pas</Transaction>
+    <Transaction>2023/10/04 11:07:44.000.975,=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\Unit1.pas</Transaction>
+    <Transaction>2023/10/04 11:07:51.000.641,=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\Unit2.pas</Transaction>
+    <Transaction>2023/10/04 11:10:52.000.796,C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\iNewUsuario.pas=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\Unit1.pas</Transaction>
+    <Transaction>2023/10/04 11:11:14.000.716,C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\uNewUsuario.pas=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\Unit2.pas</Transaction>
+    <Transaction>2023/10/05 11:23:02.000.820,C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\uProjetoB.dproj=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\uProjetoB.dproj</Transaction>
+    <Transaction>2023/10/06 10:41:32.000.719,=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\Unit1.pas</Transaction>
+    <Transaction>2023/10/09 07:53:49.928,=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\Unit1.pas</Transaction>
+    <Transaction>2023/10/09 08:41:39.046,C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\DataModule.pas=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\Unit1.pas</Transaction>
+    <Transaction>2023/10/09 08:41:39.046,C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\DataModule.dfm=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\Unit1.dfm</Transaction>
+    <Transaction>2023/10/09 08:48:19.087,=C:\Users\Usuário\Documents\GitHub\ProjetoEstagio\Unit1.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="uProjeto.pas"/>
+    <File Path="uProjeto.dfm"/>
+    <File Path="iNewUsuario.pas"/>
+    <File Path="uCadastro.pas"/>
+    <File Path="uCadastro.dfm"/>
+    <File Path="uNewUsuario.pas"/>
+    <File Path="DataModule.pas"/>
+    <File Path="DataModule.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

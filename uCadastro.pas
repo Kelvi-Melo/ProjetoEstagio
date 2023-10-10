@@ -1,0 +1,143 @@
+unit uCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, FireDAC.UI.Intf,
+  FireDAC.Stan.Async, FireDAC.Comp.ScriptCommands, FireDAC.Stan.Util,
+  FireDAC.Stan.Intf, FireDAC.Comp.Script;
+
+type
+  TForm2 = class(TForm)
+    nome: TEdit;
+    sobrenome: TEdit;
+    usuarioE: TEdit;
+    email: TEdit;
+    senha1: TEdit;
+    senha2: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Button1: TButton;
+    Label8: TLabel;
+    Label9: TLabel;
+    telefone: TMaskEdit;
+    procedure Button1Click(Sender: TObject);
+    procedure senha2Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure senha1Click(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    function ValidarEMail(aStr: string): Boolean;
+
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+uses
+  iNewUsuario, uProjeto, uNewUsuario;
+
+{$R *.dfm}
+
+
+
+procedure TForm2.Button1Click(Sender: TObject);
+var
+  usuario: iUsuario;
+begin
+  if not((nome.Text = '') or (sobrenome.Text = '') or (usuarioE.Text = '') or (telefone.Text = '(  )      -    ') or (email.Text = '')) then
+  begin
+    if length(senha1.text) >= 8 then
+    begin
+      if (senha1.text = senha2.text) then
+      begin
+        if ValidarEMail(email.Text) then
+        begin
+          usuario := Tusuario.new
+          .Nome(nome.Text)
+          .Sobrenome(sobrenome.Text)
+          .usuario(usuarioE.text)
+          .telefone(telefone.Text)
+          .email(email.text)
+          .senha(senha1.text);
+          if usuario.Cadastrar then
+          begin
+            form2.Close;
+            Form1.visible := true;
+            ShowMessage('Deu certo o cadastro, macaco');
+
+          end
+          else
+          begin
+            ShowMessage('deu erro');
+          end;
+        end
+        else
+        begin
+          ShowMessage('Escreve direito o email macaco')
+        end;
+        
+      end
+      else
+      begin
+        senha2.SetFocus;
+        Label8.Visible := true;
+
+      end;
+    end
+    else
+    begin
+      senha1.SetFocus;
+      Label9.Visible := true;
+    end;
+  end
+  else
+  begin
+    ShowMessage('Preencha os campos obrigatorios' )
+  end;
+
+
+end;
+
+
+procedure TForm2.senha1Click(Sender: TObject);
+begin
+  Label9.Visible := false;
+end;
+
+procedure TForm2.senha2Click(Sender: TObject);
+begin
+  Label8.Visible := false;
+end;
+
+function TForm2.ValidarEMail(aStr: string): Boolean;
+begin
+   aStr := Trim(UpperCase(aStr));
+ if Pos('@', aStr) > 1 then
+ begin
+   Delete(aStr, 1, pos('@', aStr));
+   Result := (Length(aStr) > 0) and (Pos('.', aStr) > 2);
+ end
+ else
+   Result := False;
+end;
+
+
+
+procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Form1.visible := true;
+end;
+
+end.

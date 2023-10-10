@@ -1,0 +1,151 @@
+unit uNewUsuario;
+
+interface
+
+uses
+  iNewUsuario, SysUtils, FireDAC.Comp.Client;
+
+Type
+  TUsuario = class(TInterfacedObject, iUsuario)
+    private
+      FpNome: string;
+      FsNome: string;
+      Fusuario: string;
+      Femail: string;
+      Ftelefone: string;
+      Fsenha: string;
+
+    public
+      class function new: iUsuario;
+      constructor create;
+      destructor destroy; override;
+
+      function pNome(aValue: string): iUsuario; overload;
+      function sNome(aValue: string): iUsuario; overload;
+      function usuario(aValue: string): iUsuario; overload;
+      function email(aValue: string): iUsuario; overload;
+      function telefone(aValue: string): iUsuario; overload;
+      function senha(aValue: string): iUsuario; overload;
+
+      function pNome: string; overload;
+      function sNome: string; overload;
+      function usuario: string; overload;
+      function email: string; overload;
+      function telefone: string; overload;
+      function senha: string; overload;
+
+      function Cadastrar: Boolean;
+  end;
+
+implementation
+
+{ TUsuario }
+
+uses DataModule;
+
+function TUsuario.email(aValue: string): iUsuario;
+begin
+  result := self;
+
+  self.Femail := aValue;
+end;
+
+function TUsuario.Cadastrar(): Boolean;
+var
+  qr: TFDQuery;
+begin
+  Result := False;
+  try
+    qr := TFDQuery.Create(nil);
+    qr.Connection := DataModule1.FDConnection1;
+    qr.Open('SELECT * FROM usuario WHERE 1 = 2');
+    qr.Insert;
+    qr.FieldByName('PNome').AsString := Trim(FpNome);
+    qr.Post;
+  finally
+    FreeAndNil(qr);
+  end;
+end;
+
+constructor TUsuario.create;
+begin
+
+end;
+
+destructor TUsuario.destroy;
+begin
+
+  inherited;
+end;
+
+function TUsuario.email: string;
+begin
+  result := self.Femail
+end;
+
+class function TUsuario.new: iUsuario;
+begin
+  result := self.create;
+end;
+
+function TUsuario.pNome: string;
+begin
+  result := self.FpNome;
+end;
+
+function TUsuario.pNome(aValue: string): iUsuario;
+begin
+  result := self;
+
+  self.FpNome := Trim(aValue);
+end;
+
+function TUsuario.senha(aValue: string): iUsuario;
+begin
+  result := self;
+
+  self.Fsenha := aValue;
+end;
+
+function TUsuario.senha: string;
+begin
+  result := self.Fsenha;
+end;
+
+function TUsuario.sNome: string;
+begin
+  result := self.FsNome;
+end;
+
+function TUsuario.sNome(aValue: string): iUsuario;
+begin
+  result := self;
+
+  self.FsNome := aValue;
+end;
+
+function TUsuario.telefone: string;
+begin
+  result := self.Ftelefone;
+end;
+
+function TUsuario.telefone(aValue: string): iUsuario;
+begin
+  result := self;
+
+  self.Ftelefone := aValue;
+end;
+
+function TUsuario.usuario(aValue: string): iUsuario;
+begin
+  result := self;
+
+  self.Fusuario := aValue;
+end;
+
+function TUsuario.usuario: string;
+begin
+  result := self.Fusuario;
+end;
+
+end.

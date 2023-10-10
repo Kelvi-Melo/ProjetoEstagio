@@ -1,0 +1,144 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 338
+  ClientWidth = 574
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  OnClose = FormClose
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 72
+    Top = 59
+    Width = 82
+    Height = 15
+    Caption = 'Primeiro nome:'
+  end
+  object Label2: TLabel
+    Left = 304
+    Top = 59
+    Width = 64
+    Height = 15
+    Caption = 'Sobrenome:'
+  end
+  object Label3: TLabel
+    Left = 72
+    Top = 109
+    Width = 94
+    Height = 15
+    Caption = 'Nome de usu'#225'rio:'
+  end
+  object Label4: TLabel
+    Left = 304
+    Top = 109
+    Width = 47
+    Height = 15
+    Caption = 'Telefone:'
+  end
+  object Label5: TLabel
+    Left = 72
+    Top = 157
+    Width = 32
+    Height = 15
+    Caption = 'Email:'
+  end
+  object Label6: TLabel
+    Left = 72
+    Top = 205
+    Width = 35
+    Height = 15
+    Caption = 'Senha:'
+  end
+  object Label7: TLabel
+    Left = 72
+    Top = 253
+    Width = 72
+    Height = 15
+    Caption = 'Confirma'#231#227'o:'
+  end
+  object Label8: TLabel
+    Left = 72
+    Top = 301
+    Width = 178
+    Height = 15
+    Caption = 'As senhas n'#227'o est'#227'o semelhantes.'
+    Color = clRed
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object Edit1: TEdit
+    Left = 72
+    Top = 80
+    Width = 169
+    Height = 23
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 304
+    Top = 80
+    Width = 209
+    Height = 23
+    TabOrder = 1
+  end
+  object Edit3: TEdit
+    Left = 72
+    Top = 128
+    Width = 169
+    Height = 23
+    TabOrder = 2
+  end
+  object Edit4: TEdit
+    Left = 72
+    Top = 176
+    Width = 441
+    Height = 23
+    TabOrder = 3
+  end
+  object Edit5: TEdit
+    Left = 72
+    Top = 224
+    Width = 121
+    Height = 23
+    PasswordChar = '*'
+    TabOrder = 4
+  end
+  object Edit6: TEdit
+    Left = 72
+    Top = 272
+    Width = 121
+    Height = 23
+    PasswordChar = '*'
+    TabOrder = 5
+    OnClick = Edit6Click
+  end
+  object Button1: TButton
+    Left = 260
+    Top = 271
+    Width = 75
+    Height = 25
+    Caption = 'Cadastrar'
+    TabOrder = 6
+    OnClick = Button1Click
+  end
+  object MaskEdit1: TMaskEdit
+    Left = 304
+    Top = 128
+    Width = 203
+    Height = 23
+    EditMask = '!\(99\) 00000-0000;1;0'
+    MaxLength = 15
+    TabOrder = 7
+    Text = '(  )      -    '
+  end
+end

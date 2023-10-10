@@ -1,0 +1,26 @@
+unit iNewUsuario;
+
+interface
+
+type
+  iUsuario = interface
+    function pNome(aValue: string): iUsuario; overload;
+    function sNome(aValue: string): iUsuario; overload;
+    function usuario(aValue: string): iUsuario; overload;
+    function email(aValue: string): iUsuario; overload;
+    function telefone(aValue: string): iUsuario; overload;
+    function senha(aValue: string): iUsuario; overload;
+
+    function pNome: string; overload;
+    function sNome: string; overload;
+    function usuario: string; overload;
+    function email: string; overload;
+    function telefone: string; overload;
+    function senha: string; overload;
+
+  end;
+
+implementation
+
+end.
+

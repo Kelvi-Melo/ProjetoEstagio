@@ -1,0 +1,18 @@
+program uProjetoB;
+
+uses
+  Vcl.Forms,
+  uProjeto in 'uProjeto.pas' {Form1},
+  uCadastro in 'uCadastro.pas' {Form2},
+  iNewUsuario in 'iNewUsuario.pas',
+  uNewUsuario in 'uNewUsuario.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.
